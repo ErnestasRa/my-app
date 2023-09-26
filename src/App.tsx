@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FilmsPage />} />
-          <Route path="/about" element={<AboutPage text="any random text" />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
     </DataContextProvider>
