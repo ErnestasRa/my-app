@@ -1,0 +1,50 @@
+@use "../../styles/colors.scss";
+.container {
+  display: flex;
+  border: 1px solid colors.$fontcolor;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  & .characterTile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    & span {
+      color: colors.$fontcolor;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  }
+  & .title {
+    width: 130px;
+    color: colors.$titlecolor;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .characterTile {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    .characterTile {
+      height: 70px;
+      width: 100%;
+      justify-content: space-between;
+      .title {
+        width: 70px;
+      }
+      span {
+        font-size: 12px;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+    }
+  }
+}

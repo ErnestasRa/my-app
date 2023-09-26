@@ -1,0 +1,23 @@
+@use "../../styles/colors.scss";
+
+.sidebar {
+  background-color: #333;
+  padding-top: 20px;
+  min-height: 100%;
+  & ul {
+    list-style-type: none;
+    padding: 0;
+    & li {
+      margin-bottom: 10px;
+      & a {
+        text-decoration: none;
+        color: colors.$fontcolor;
+        padding: 10px 20px;
+        display: block;
+      }
+      & a:hover {
+        background-color: #555;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use "../../styles/colors.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+
+  & .text {
+    color: colors.$fontcolor;
+    position: absolute;
+  }
+  .loader {
+    margin: auto;
+    border: 20px solid #eaf0f6;
+    border-radius: 50%;
+    border-top: 20px solid colors.$titlecolor;
+    width: 200px;
+    height: 200px;
+    animation: spinner 4s linear infinite;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

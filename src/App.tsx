@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AboutPage, FilmsPage } from "./pages";
+import { SideNavBar } from "./components";
+import { DataContextProvider } from "./context/DataContext";
+import "./styles/index.scss";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataContextProvider>
+      <SideNavBar />
+      <BrowserRouter>
+        <Routes>
+          {/* text is hardcoded, yes I know lol */}
+          <Route path="/" element={<FilmsPage />} />
+          <Route path="/about" element={<AboutPage text="any random text" />} />
+        </Routes>
+      </BrowserRouter>
+    </DataContextProvider>
   );
-}
+};
 
 export default App;

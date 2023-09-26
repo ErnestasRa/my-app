@@ -1,0 +1,11 @@
+@use "../../styles/colors.scss";
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  & .titles {
+    color: colors.$titlecolor;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
