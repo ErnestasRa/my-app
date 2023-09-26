@@ -11,7 +11,6 @@ const App: React.FC = () => {
       <SideNavBar />
       <BrowserRouter>
         <Routes>
-          {/* text is hardcoded, yes I know lol */}
           <Route path="/" element={<FilmsPage />} />
           <Route path="/about" element={<AboutPage text="any random text" />} />
         </Routes>
