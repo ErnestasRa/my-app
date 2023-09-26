@@ -23,7 +23,7 @@ export const FilmTile: React.FC<FilmTileProps> = ({
         <h2>{title}</h2>
         <span>Release date: {releaseDate}</span>
         <button onClick={() => events?.onShowPeopleClick?.()}>
-          <text>Show People</text>
+          Show People
         </button>
       </div>
       <div className={classes.episodeContainer}>
