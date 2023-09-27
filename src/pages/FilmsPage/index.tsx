@@ -21,7 +21,7 @@ export const FilmsPage: React.FC = () => {
                 key={i}
                 events={{
                   onShowPeopleClick: () => {
-                    if (!!setSelectedMovie) setSelectedMovie(Array(film));
+                    setSelectedMovie?.(Array(film));
                   },
                 }}
               />
